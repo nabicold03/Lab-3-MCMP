@@ -16,9 +16,9 @@ void setTimer(int duration){
 }
 
 void timerRun(){
-	if(timer_counter > 0){
-		timer_counter--;
-		if(timer_counter <= 0){
+	if(timer_count > 0){
+		timer_count--;
+		if(timer_count <= 0){
 			timer_flag=1;
 		}
 	}
