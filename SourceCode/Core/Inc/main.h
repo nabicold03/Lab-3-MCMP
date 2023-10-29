@@ -72,6 +72,34 @@ void Error_Handler(void);
 #define LED_YELLOW_2_GPIO_Port GPIOA
 #define LED_GREEN_2_Pin GPIO_PIN_6
 #define LED_GREEN_2_GPIO_Port GPIOA
+#define Sev1_0_Pin GPIO_PIN_7
+#define Sev1_0_GPIO_Port GPIOA
+#define Sev2_0_Pin GPIO_PIN_0
+#define Sev2_0_GPIO_Port GPIOB
+#define Sev2_1_Pin GPIO_PIN_1
+#define Sev2_1_GPIO_Port GPIOB
+#define Sev2_2_Pin GPIO_PIN_2
+#define Sev2_2_GPIO_Port GPIOB
+#define Sev1_1_Pin GPIO_PIN_8
+#define Sev1_1_GPIO_Port GPIOA
+#define Sev1_2_Pin GPIO_PIN_9
+#define Sev1_2_GPIO_Port GPIOA
+#define Sev1_3_Pin GPIO_PIN_10
+#define Sev1_3_GPIO_Port GPIOA
+#define Sev1_4_Pin GPIO_PIN_11
+#define Sev1_4_GPIO_Port GPIOA
+#define Sev1_5_Pin GPIO_PIN_12
+#define Sev1_5_GPIO_Port GPIOA
+#define Sev1_6_Pin GPIO_PIN_13
+#define Sev1_6_GPIO_Port GPIOA
+#define Sev2_3_Pin GPIO_PIN_3
+#define Sev2_3_GPIO_Port GPIOB
+#define Sev2_4_Pin GPIO_PIN_4
+#define Sev2_4_GPIO_Port GPIOB
+#define Sev2_5_Pin GPIO_PIN_5
+#define Sev2_5_GPIO_Port GPIOB
+#define Sev2_6_Pin GPIO_PIN_6
+#define Sev2_6_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
