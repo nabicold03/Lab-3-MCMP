@@ -17,11 +17,11 @@ extern int default_red;
 extern int default_yellow;
 extern int default_green;
 
-#define INIT	1
-#define Gr1_Re2	2
-#define Ye1_Re2	3
-#define Re1_Gr2	4
-#define Re1_Ye2	5
+#define INIT		1
+#define Gr1andRe2	2
+#define Ye1andRe2	3
+#define Re1andGr2	4
+#define Re1andYe2	5
 
 #define MAN_RED		11
 #define MAN_YELLOW	12

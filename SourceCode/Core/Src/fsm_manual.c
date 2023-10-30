@@ -15,7 +15,7 @@ void fsm_manual_run(){
 
 			//set environment
 			if(timer1_flag==1){
-				status=Gr1_Re2;
+				status=Gr1andRe2;
 				setTimer1(5000);
 			}
 			if(isButton1Pressed()){
@@ -28,7 +28,7 @@ void fsm_manual_run(){
 
 			//set environment
 			if(timer1_flag==1){
-				status=Gr1_Re2;
+				status=Gr1andRe2;
 				setTimer1(5000);
 			}
 			if(isButton1Pressed()){
