@@ -11,7 +11,7 @@ void fsm_run(){
 		case INIT:
 			//TODO
 			status=AUTO_RED;
-			setTimer(500);
+			setTimer1(500);
 			break;
 		case AUTO_RED:
 
