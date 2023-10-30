@@ -7,3 +7,6 @@
 
 #include"global.h"
 int status;
+int default_red=5000;
+int default_yellow=3000;
+int default_green=2000;

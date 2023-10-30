@@ -24,6 +24,8 @@
 /* USER CODE BEGIN Includes */
 #include"software_timer.h"
 #include"button.h"
+#include"fsm.h"
+#include"fsm_manual.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
