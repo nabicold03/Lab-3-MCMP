@@ -7,6 +7,7 @@
 
 #ifndef SRC_DISPLAY_7SEG_H_
 #define SRC_DISPLAY_7SEG_H_
+#include"main.h"
 
 void display7seg(int number);
 

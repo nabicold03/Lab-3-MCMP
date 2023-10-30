@@ -39,11 +39,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   0000948d  00000000  00000000  0002bebc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000821ec  00000000  00000000  00035349  2**0
+ 18 .debug_str    000821d0  00000000  00000000  00035349  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000b7535  2**0
+ 19 .comment      00000053  00000000  00000000  000b7519  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00002648  00000000  00000000  000b7588  2**2
+ 20 .debug_frame  00002648  00000000  00000000  000b756c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -377,17 +377,17 @@ static void MX_GPIO_Init(void)
  80002da:	f643 71fe 	movw	r1, #16382	; 0x3ffe
  80002de:	481c      	ldr	r0, [pc, #112]	; (8000350 <MX_GPIO_Init+0xd4>)
  80002e0:	f000 fc18 	bl	8000b14 <HAL_GPIO_WritePin>
-                          |LED_YELLOW_2_Pin|LED_GREEN_2_Pin|Sev1_0_Pin|Sev1_1_Pin
-                          |Sev1_2_Pin|Sev1_3_Pin|Sev1_4_Pin|Sev1_5_Pin
-                          |Sev1_6_Pin, GPIO_PIN_RESET);
+                          |LED_YELLOW_2_Pin|LED_GREEN_2_Pin|Pin0_Pin|Pin1_Pin
+                          |Pin2_Pin|Pin3_Pin|Pin4_Pin|Pin5_Pin
+                          |Pin6_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, Sev2_0_Pin|Sev2_1_Pin|Sev2_2_Pin|Sev2_3_Pin
+  HAL_GPIO_WritePin(GPIOB, Pin0_2_Pin|Pin1_2_Pin|Pin2_2_Pin|Pin3_2_Pin
  80002e4:	2200      	movs	r2, #0
  80002e6:	217f      	movs	r1, #127	; 0x7f
  80002e8:	481a      	ldr	r0, [pc, #104]	; (8000354 <MX_GPIO_Init+0xd8>)
  80002ea:	f000 fc13 	bl	8000b14 <HAL_GPIO_WritePin>
-                          |Sev2_4_Pin|Sev2_5_Pin|Sev2_6_Pin, GPIO_PIN_RESET);
+                          |Pin4_2_Pin|Pin5_2_Pin|Pin6_2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : Button_Pin */
   GPIO_InitStruct.Pin = Button_Pin;
@@ -406,15 +406,15 @@ static void MX_GPIO_Init(void)
  8000304:	f000 fa8c 	bl	8000820 <HAL_GPIO_Init>
 
   /*Configure GPIO pins : LED_RED_1_Pin LED_YELLOW_1_Pin LED_GREEN_1_Pin LED_RED_2_Pin
-                           LED_YELLOW_2_Pin LED_GREEN_2_Pin Sev1_0_Pin Sev1_1_Pin
-                           Sev1_2_Pin Sev1_3_Pin Sev1_4_Pin Sev1_5_Pin
-                           Sev1_6_Pin */
+                           LED_YELLOW_2_Pin LED_GREEN_2_Pin Pin0_Pin Pin1_Pin
+                           Pin2_Pin Pin3_Pin Pin4_Pin Pin5_Pin
+                           Pin6_Pin */
   GPIO_InitStruct.Pin = LED_RED_1_Pin|LED_YELLOW_1_Pin|LED_GREEN_1_Pin|LED_RED_2_Pin
  8000308:	f643 73fe 	movw	r3, #16382	; 0x3ffe
  800030c:	613b      	str	r3, [r7, #16]
-                          |LED_YELLOW_2_Pin|LED_GREEN_2_Pin|Sev1_0_Pin|Sev1_1_Pin
-                          |Sev1_2_Pin|Sev1_3_Pin|Sev1_4_Pin|Sev1_5_Pin
-                          |Sev1_6_Pin;
+                          |LED_YELLOW_2_Pin|LED_GREEN_2_Pin|Pin0_Pin|Pin1_Pin
+                          |Pin2_Pin|Pin3_Pin|Pin4_Pin|Pin5_Pin
+                          |Pin6_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
  800030e:	2301      	movs	r3, #1
  8000310:	617b      	str	r3, [r7, #20]
@@ -430,12 +430,12 @@ static void MX_GPIO_Init(void)
  8000320:	480b      	ldr	r0, [pc, #44]	; (8000350 <MX_GPIO_Init+0xd4>)
  8000322:	f000 fa7d 	bl	8000820 <HAL_GPIO_Init>
 
-  /*Configure GPIO pins : Sev2_0_Pin Sev2_1_Pin Sev2_2_Pin Sev2_3_Pin
-                           Sev2_4_Pin Sev2_5_Pin Sev2_6_Pin */
-  GPIO_InitStruct.Pin = Sev2_0_Pin|Sev2_1_Pin|Sev2_2_Pin|Sev2_3_Pin
+  /*Configure GPIO pins : Pin0_2_Pin Pin1_2_Pin Pin2_2_Pin Pin3_2_Pin
+                           Pin4_2_Pin Pin5_2_Pin Pin6_2_Pin */
+  GPIO_InitStruct.Pin = Pin0_2_Pin|Pin1_2_Pin|Pin2_2_Pin|Pin3_2_Pin
  8000326:	237f      	movs	r3, #127	; 0x7f
  8000328:	613b      	str	r3, [r7, #16]
-                          |Sev2_4_Pin|Sev2_5_Pin|Sev2_6_Pin;
+                          |Pin4_2_Pin|Pin5_2_Pin|Pin6_2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
  800032a:	2301      	movs	r3, #1
  800032c:	617b      	str	r3, [r7, #20]
