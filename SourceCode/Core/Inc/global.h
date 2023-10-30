@@ -16,6 +16,7 @@ extern int status;
 extern int default_red;
 extern int default_yellow;
 extern int default_green;
+extern int Sevsegbuffer[2];
 
 #define INIT		1
 #define Gr1andRe2	2
