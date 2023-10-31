@@ -451,17 +451,11 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./Core/Src/global.o
  .data          0x0000000000000000        0x0 ./Core/Src/global.o
  .bss           0x0000000000000000        0x0 ./Core/Src/global.o
- .data.default_red
-                0x0000000000000000        0x4 ./Core/Src/global.o
- .data.default_yellow
-                0x0000000000000000        0x4 ./Core/Src/global.o
- .data.default_green
-                0x0000000000000000        0x4 ./Core/Src/global.o
  .data.Sevsegbuffer1
                 0x0000000000000000        0xc ./Core/Src/global.o
  .data.Sevsegbuffer2
                 0x0000000000000000        0xc ./Core/Src/global.o
- .debug_info    0x0000000000000000      0x248 ./Core/Src/global.o
+ .debug_info    0x0000000000000000      0x21e ./Core/Src/global.o
  .debug_abbrev  0x0000000000000000       0xa9 ./Core/Src/global.o
  .debug_aranges
                 0x0000000000000000       0x18 ./Core/Src/global.o

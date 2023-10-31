@@ -13,9 +13,8 @@
 #include"main.h"
 
 extern int status;
-extern int default_red;
-extern int default_yellow;
-extern int default_green;
+extern int current7seg1;
+extern int current7seg2;
 extern int Sevsegbuffer1[3];
 extern int Sevsegbuffer2[3];
 

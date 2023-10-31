@@ -15,6 +15,8 @@ void fsm_run(){
 			status=Gr1andRe2;
 			setTimer1(3000);	//set timer 1 cho auto_red chay trong 5s
 			setTimer2(1000);	//set timer 2 de display len led
+			current7seg1=Sevsegbuffer1[2];	//set time for green 1
+			current7seg2=Sevsegbuffer2[0];	//set time for red 2
 			break;
 		case Gr1andRe2:
 			//TODO
@@ -29,9 +31,12 @@ void fsm_run(){
 				status=Ye1andRe2;
 				setTimer1(2000);
 				setTimer2(1000);
+				current7seg1=Sevsegbuffer1[1];
 			}
 			if(timer2_flag==1){
 				setTimer2(1000);
+				current7seg2--;
+				current7seg1--;
 			}
 			if(isButton1Pressed()){
 				status=MAN_RED;
@@ -51,9 +56,13 @@ void fsm_run(){
 				status=Re1andGr2;
 				setTimer1(3000);
 				setTimer2(1000);
+				current7seg1=Sevsegbuffer1[0];
+				current7seg2=Sevsegbuffer2[2];
 			}
 			if(timer2_flag==1){
 				setTimer2(1000);
+				current7seg1--;
+				current7seg2--;
 			}
 			if(isButton1Pressed()){
 				status=MAN_RED;
@@ -73,9 +82,12 @@ void fsm_run(){
 				status=Re1andYe2;
 				setTimer1(2000);
 				setTimer2(1000);
+				current7seg1=Sevsegbuffer1[1];
 			}
 			if(timer2_flag==1){
 				setTimer2(1000);
+				current7seg1--;
+				current7seg--;
 			}
 			if(isButton1Pressed()){
 				status=MAN_RED;
@@ -96,6 +108,8 @@ void fsm_run(){
 			}
 			if(timer2_flag==1){
 				setTimer2(1000);
+				current7seg1--;
+				current7seg2--;
 			}
 			if(isButton1Pressed()){
 				status=MAN_RED;
