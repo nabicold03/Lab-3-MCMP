@@ -25,7 +25,8 @@ void fsm_run(){
 			Gr1_Re2();
 
 			//display 7segment led
-
+			display7seg1(current7seg1);
+			display7seg2(current7seg2);
 			//setup environment
 			if(timer1_flag==1){
 				status=Ye1andRe2;
@@ -87,7 +88,7 @@ void fsm_run(){
 			if(timer2_flag==1){
 				setTimer2(1000);
 				current7seg1--;
-				current7seg--;
+				current7seg2--;
 			}
 			if(isButton1Pressed()){
 				status=MAN_RED;

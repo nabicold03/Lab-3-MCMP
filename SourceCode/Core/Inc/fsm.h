@@ -10,6 +10,7 @@
 
 #include"global.h"
 #include"traffic.h"
+#include"display_7seg.h"
 
 void fsm_run();
 
