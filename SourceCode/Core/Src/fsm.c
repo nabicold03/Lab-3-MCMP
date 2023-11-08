@@ -18,9 +18,10 @@ void fsm_run(){
 			status=Gr1andRe2;
 			current_led_1=Sevsegbuffer1[2];
 			current_led_2=Sevsegbuffer2[0];
+			updateClockBuffer(current_led_1, current_led_2);
 			setTimer1(current_led_1*1000);	//set timer 1 Gr1andRe2
 			setTimer2(1000);			//set timer 2 updateClockBuffer
-			setTimer3(250);				//set timer 3 update7seg
+			setTimer3(200);				//set timer 3 update7seg
 			break;
 		case Gr1andRe2:
 			//TODO
@@ -35,23 +36,22 @@ void fsm_run(){
 				setTimer1(current_led_1*1000);
 			}
 			if(timer2_flag==1){
-//				updateClockBuffer(current_led_1,current_led_2);
-				updateClockBuffer(5,4);
-				setTimer2(20);
+				updateClockBuffer(current_led_1,current_led_2);
+				current_led_1--;
+				current_led_2--;
+				setTimer2(1000);
 			}
 			if(timer3_flag==1){
 				update7seg(index_led);
 				if(index_led >= 3){
 					index_led=0;
 				} else index_led++;
-				setTimer3(250);
+				setTimer3(200);
 			}
 			if(isButton1Pressed()){
 				status=MAN_RED;
 				setTimer1(10000);
 			}
-			current_led_1--;
-			current_led_2--;
 			break;
 		case Ye1andRe2:
 			//TODO
@@ -69,20 +69,20 @@ void fsm_run(){
 			if(timer2_flag==1){
 				updateClockBuffer(current_led_1,current_led_2);
 				setTimer2(1000);
+				current_led_1--;
+				current_led_2--;
 			}
 			if(timer3_flag==1){
 				update7seg(index_led);
 				if(index_led >= 3){
 					index_led=0;
 				} else index_led++;
-				setTimer3(250);
+				setTimer3(200);
 			}
 			if(isButton1Pressed()){
 				status=MAN_RED;
 				setTimer1(10000);
 			}
-			current_led_1--;
-			current_led_2--;
 			break;
 		case Re1andGr2:
 			//TODO
@@ -101,20 +101,20 @@ void fsm_run(){
 			if(timer2_flag==1){
 				setTimer2(1000);
 				updateClockBuffer(current_led_1, current_led_2);
+				current_led_1--;
+				current_led_2--;
 			}
 			if(timer3_flag==1){
 				update7seg(index_led);
 				if(index_led >= 3){
 					index_led=0;
 				} else index_led++;
-				setTimer3(250);
+				setTimer3(200);
 			}
 			if(isButton1Pressed()){
 				status=MAN_RED;
 				setTimer1(10000);
 			}
-			current_led_1--;
-			current_led_2--;
 			break;
 		case Re1andYe2:
 			//TODO
@@ -126,29 +126,28 @@ void fsm_run(){
 
 			//setup environment
 			if(timer1_flag==1){
-				status=INIT;
 				status=Gr1andRe2;
-				current_led_1=Sevsegbuffer1[2]*1000;
-				current_led_2=Sevsegbuffer2[0]*1000;
-				setTimer1(current_led_1);
+				current_led_1=Sevsegbuffer1[2];
+				current_led_2=Sevsegbuffer2[0];
+				setTimer1(current_led_1*1000);
 			}
 			if(timer2_flag==1){
 				setTimer2(1000);
 				updateClockBuffer(current_led_1, current_led_2);
+				current_led_1--;
+				current_led_2--;
 			}
 			if(timer3_flag==1){
 				update7seg(index_led);
 				if(index_led >= 3){
 					index_led=0;
 				} else index_led++;
-				setTimer3(250);
+				setTimer3(200);
 			}
 			if(isButton1Pressed()){
 				status=MAN_RED;
 				setTimer1(10000);
 			}
-			current_led_1--;
-			current_led_2--;
 			break;
 		default:
 			break;

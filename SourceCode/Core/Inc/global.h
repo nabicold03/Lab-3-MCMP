@@ -13,6 +13,7 @@
 #include"main.h"
 
 extern int status;
+extern int led_buffer[4];
 extern int current_led_1;
 extern int current_led_2;
 extern int Sevsegbuffer1[3];
