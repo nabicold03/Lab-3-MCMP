@@ -104,7 +104,7 @@ void display7seg(int number){
 	}
 }
 int led_buffer[4]={1, 2, 3, 4};
-void update7SEG(int index, int led){
+void update7seg(int index){
 	switch(index){
 		case 0:
 			HAL_GPIO_WritePin(On_1_GPIO_Port, On_1_Pin, RESET);
@@ -133,18 +133,16 @@ void update7SEG(int index, int led){
 		default:
 			break;
 	}
-	if(led==1){
-		display7seg(led_buffer[index]);
-	} else display7seg(led_buffer[index]);
+	display7seg(led_buffer[index]);
 }
 void updateClockBuffer(int secled1, int secled2){
-	//minute
+	//sec1
 	if(secled1 < 10){
 		led_buffer[0]=0;
 	} else led_buffer[0]=secled1/10;
 	led_buffer[1]=secled1%10;
 
-	//second
+	//sec2
 	if(secled2 < 10){
 		led_buffer[2]=0;
 	} else led_buffer[2]=secled2/10;

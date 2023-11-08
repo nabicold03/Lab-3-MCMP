@@ -13,8 +13,8 @@
 #include"main.h"
 
 extern int status;
-extern int current7seg1;
-extern int current7seg2;
+extern int current_led_1;
+extern int current_led_2;
 extern int Sevsegbuffer1[3];
 extern int Sevsegbuffer2[3];
 

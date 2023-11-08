@@ -97,10 +97,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  status=INIT;
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  fsm_run();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
