@@ -80,6 +80,8 @@ void Error_Handler(void);
 #define Pin1_2_GPIO_Port GPIOB
 #define Pin2_2_Pin GPIO_PIN_2
 #define Pin2_2_GPIO_Port GPIOB
+#define On_4_Pin GPIO_PIN_10
+#define On_4_GPIO_Port GPIOB
 #define Pin1_Pin GPIO_PIN_8
 #define Pin1_GPIO_Port GPIOA
 #define Pin2_Pin GPIO_PIN_9
@@ -100,6 +102,12 @@ void Error_Handler(void);
 #define Pin5_2_GPIO_Port GPIOB
 #define Pin6_2_Pin GPIO_PIN_6
 #define Pin6_2_GPIO_Port GPIOB
+#define On_1_Pin GPIO_PIN_7
+#define On_1_GPIO_Port GPIOB
+#define On_2_Pin GPIO_PIN_8
+#define On_2_GPIO_Port GPIOB
+#define On_3_Pin GPIO_PIN_9
+#define On_3_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

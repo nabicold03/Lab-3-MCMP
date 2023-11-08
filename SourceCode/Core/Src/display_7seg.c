@@ -200,3 +200,50 @@ void display7seg2(int number){
 			break;
 	}
 }
+int led_buffer[4]={1, 2, 3, 4};
+void update7SEG(int index, int led){
+	switch(index){
+		case 0:
+			HAL_GPIO_WritePin(On_1_GPIO_Port, On_1_Pin, RESET);
+			HAL_GPIO_WritePin(On_2_GPIO_Port, On_2_Pin, SET);
+			HAL_GPIO_WritePin(On_3_GPIO_Port, On_3_Pin, SET);
+			HAL_GPIO_WritePin(On_4_GPIO_Port, On_4_Pin, SET);
+			break;
+		case 1:
+			HAL_GPIO_WritePin(On_1_GPIO_Port, On_1_Pin, SET);
+			HAL_GPIO_WritePin(On_2_GPIO_Port, On_2_Pin, RESET);
+			HAL_GPIO_WritePin(On_3_GPIO_Port, On_3_Pin, SET);
+			HAL_GPIO_WritePin(On_4_GPIO_Port, On_4_Pin, SET);
+			break;
+		case 2:
+			HAL_GPIO_WritePin(On_1_GPIO_Port, On_1_Pin, SET);
+			HAL_GPIO_WritePin(On_2_GPIO_Port, On_2_Pin, SET);
+			HAL_GPIO_WritePin(On_3_GPIO_Port, On_3_Pin, RESET);
+			HAL_GPIO_WritePin(On_4_GPIO_Port, On_4_Pin, SET);
+			break;
+		case 3:
+			HAL_GPIO_WritePin(On_1_GPIO_Port, On_1_Pin, SET);
+			HAL_GPIO_WritePin(On_2_GPIO_Port, On_2_Pin, SET);
+			HAL_GPIO_WritePin(On_3_GPIO_Port, On_3_Pin, SET);
+			HAL_GPIO_WritePin(On_4_GPIO_Port, On_4_Pin, RESET);
+			break;
+		default:
+			break;
+	}
+	if(led==1){
+		display7seg1(led_buffer[index]);
+	} else display7seg2(led_buffer[index]);
+}
+void updateClockBuffer(int secled1, int secled2){
+	//minute
+	if(secled1 < 10){
+		led_buffer[0]=0;
+	} else led_buffer[0]=secled1/10;
+	led_buffer[1]=secled1%10;
+
+	//second
+	if(secled2 < 10){
+		led_buffer[2]=0;
+	} else led_buffer[2]=secled2/10;
+	led_buffer[3]=secled2%10;
+}
