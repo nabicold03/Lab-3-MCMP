@@ -207,9 +207,7 @@ static void MX_GPIO_Init(void)
                           |Pin6_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, Pin0_2_Pin|Pin1_2_Pin|Pin2_2_Pin|On_4_Pin
-                          |Pin3_2_Pin|Pin4_2_Pin|Pin5_2_Pin|Pin6_2_Pin
-                          |On_1_Pin|On_2_Pin|On_3_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, On_1_Pin|On_2_Pin|On_3_Pin|On_4_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : Button_Pin */
   GPIO_InitStruct.Pin = Button_Pin;
@@ -230,12 +228,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : Pin0_2_Pin Pin1_2_Pin Pin2_2_Pin On_4_Pin
-                           Pin3_2_Pin Pin4_2_Pin Pin5_2_Pin Pin6_2_Pin
-                           On_1_Pin On_2_Pin On_3_Pin */
-  GPIO_InitStruct.Pin = Pin0_2_Pin|Pin1_2_Pin|Pin2_2_Pin|On_4_Pin
-                          |Pin3_2_Pin|Pin4_2_Pin|Pin5_2_Pin|Pin6_2_Pin
-                          |On_1_Pin|On_2_Pin|On_3_Pin;
+  /*Configure GPIO pins : On_1_Pin On_2_Pin On_3_Pin On_4_Pin */
+  GPIO_InitStruct.Pin = On_1_Pin|On_2_Pin|On_3_Pin|On_4_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
