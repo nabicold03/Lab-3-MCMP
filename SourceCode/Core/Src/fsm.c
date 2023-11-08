@@ -48,7 +48,7 @@ void fsm_run(){
 				} else index_led++;
 				setTimer3(200);
 			}
-			if(isButton1Pressed()){
+			if(isButtonPressed(0)){
 				status=MAN_RED;
 				setTimer1(10000);
 			}
@@ -79,7 +79,7 @@ void fsm_run(){
 				} else index_led++;
 				setTimer3(200);
 			}
-			if(isButton1Pressed()){
+			if(isButtonPressed(0)){
 				status=MAN_RED;
 				setTimer1(10000);
 			}
@@ -111,7 +111,7 @@ void fsm_run(){
 				} else index_led++;
 				setTimer3(200);
 			}
-			if(isButton1Pressed()){
+			if(isButtonPressed(0)){
 				status=MAN_RED;
 				setTimer1(10000);
 			}
@@ -144,7 +144,7 @@ void fsm_run(){
 				} else index_led++;
 				setTimer3(200);
 			}
-			if(isButton1Pressed()){
+			if(isButtonPressed(0)){
 				status=MAN_RED;
 				setTimer1(10000);
 			}

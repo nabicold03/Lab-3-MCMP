@@ -18,7 +18,7 @@ void fsm_manual_run(){
 				status=Gr1andRe2;
 				setTimer1(5000);
 			}
-			if(isButton1Pressed()){
+			if(isButtonPressed(0)){
 				status=MAN_YELLOW;
 				setTimer1(10000);
 			}
@@ -31,7 +31,7 @@ void fsm_manual_run(){
 				status=Gr1andRe2;
 				setTimer1(5000);
 			}
-			if(isButton1Pressed()){
+			if(isButtonPressed(0)){
 				status=MAN_YELLOW;
 				setTimer1(10000);
 			}
