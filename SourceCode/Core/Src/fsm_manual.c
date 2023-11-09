@@ -15,7 +15,7 @@ void fsm_manual_run(){
 
 			//set environment
 			if(timer_flag[0]==1){
-				status=Gr1andRe2;
+				status=INIT;
 				setTimer(0,5000);
 			}
 			if(isButtonPressed(0)){
