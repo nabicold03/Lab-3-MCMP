@@ -14,26 +14,26 @@ void fsm_manual_run(){
 			//TODO
 
 			//set environment
-			if(timer1_flag==1){
+			if(timer_flag[0]==1){
 				status=Gr1andRe2;
-				setTimer1(5000);
+				setTimer(0,5000);
 			}
 			if(isButtonPressed(0)){
 				status=MAN_YELLOW;
-				setTimer1(10000);
+				setTimer(0,10000);
 			}
 			break;
 		case MAN_YELLOW:
 			//TODO
 
 			//set environment
-			if(timer1_flag==1){
+			if(timer_flag[0]==1){
 				status=Gr1andRe2;
-				setTimer1(5000);
+				setTimer(0,5000);
 			}
 			if(isButtonPressed(0)){
 				status=MAN_YELLOW;
-				setTimer1(10000);
+				setTimer(0,10000);
 			}
 			break;
 		case MAN_GREEN:
