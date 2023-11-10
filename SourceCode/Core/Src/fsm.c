@@ -16,8 +16,8 @@ void fsm_run(){
 
 			//setup environment
 			status=Gr1andRe2;
-			current_led_1=Sevsegbuffer1[2];
-			current_led_2=Sevsegbuffer2[0];
+			current_led_1=Sevsegbuffer[2];
+			current_led_2=Sevsegbuffer[0];
 			updateClockBuffer(current_led_1, current_led_2);
 			setTimer(0,current_led_1*1000);
 			setTimer(1,1000);
@@ -32,7 +32,7 @@ void fsm_run(){
 			//setup environment
 			if(timer_flag[0]==1){
 				status=Ye1andRe2;
-				current_led_1=Sevsegbuffer1[1];
+				current_led_1=Sevsegbuffer[1];
 				setTimer(0,current_led_1*1000);
 			}
 			if(timer_flag[1]==1){
@@ -62,8 +62,8 @@ void fsm_run(){
 			//setup environment
 			if(timer_flag[0]==1){
 				status=Re1andGr2;
-				current_led_1=Sevsegbuffer1[0];
-				current_led_2=Sevsegbuffer2[2];
+				current_led_1=Sevsegbuffer[0];
+				current_led_2=Sevsegbuffer[2];
 				setTimer(0,current_led_2*1000);
 			}
 			if(timer_flag[1]==1){
@@ -95,7 +95,7 @@ void fsm_run(){
 			//setup environment
 			if(timer_flag[0]==1){
 				status=Re1andYe2;
-				current_led_2=Sevsegbuffer2[1];
+				current_led_2=Sevsegbuffer[1];
 				setTimer(0,current_led_2*1000);
 			}
 			if(timer_flag[1]==1){
@@ -127,8 +127,8 @@ void fsm_run(){
 			//setup environment
 			if(timer_flag[0]==1){
 				status=Gr1andRe2;
-				current_led_1=Sevsegbuffer1[2];
-				current_led_2=Sevsegbuffer2[0];
+				current_led_1=Sevsegbuffer[2];
+				current_led_2=Sevsegbuffer[0];
 				setTimer(0,current_led_1*1000);
 			}
 			if(timer_flag[1]==1){

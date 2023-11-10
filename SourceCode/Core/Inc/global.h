@@ -14,10 +14,7 @@
 
 extern int status;
 extern int led_buffer[4];
-extern int current_led_1;
-extern int current_led_2;
-extern int Sevsegbuffer1[3];
-extern int Sevsegbuffer2[3];
+extern int Sevsegbuffer[3];
 
 #define INIT		1
 #define Gr1andRe2	2

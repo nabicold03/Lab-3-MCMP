@@ -10,13 +10,19 @@
 
 void fsm_manual_run(){
 	switch(status){
+		case AUTO_RED:
+
+
+			//set environment:
+			if(timer_flag[0]==1){
+				status=INIT;
+			}
 		case MAN_RED:
 			//TODO
 
 			//set environment
 			if(timer_flag[0]==1){
 				status=INIT;
-				setTimer(0,5000);
 			}
 			if(isButtonPressed(0)){
 				status=MAN_YELLOW;
