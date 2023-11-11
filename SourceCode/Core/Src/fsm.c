@@ -22,10 +22,6 @@ void fsm_run(){
 			setTimer0(current_led_1*1000);
 			setTimer1(1000);
 			setTimer2(200);
-//			setTimer(0,current_led_1*1000);
-//			setTimer(1,1000);
-//			setTimer(2,200);
-//			update7seg(index_led);
 			break;
 		case Gr1andRe2:
 			//TODO
@@ -96,8 +92,6 @@ void fsm_run(){
 			//turn on led
 			Re1_Gr2();
 
-			//display 7segment led
-
 			//setup environment
 			if(timer_flag0==1){
 				status=Re1andYe2;
@@ -128,8 +122,6 @@ void fsm_run(){
 
 			//turn on led
 			Re1_Ye2();
-
-			//display 7segment led
 
 			//setup environment
 			if(timer_flag0==1){

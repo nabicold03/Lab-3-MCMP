@@ -17,7 +17,5 @@ void setTimer0(int duration);
 void setTimer1(int duration);
 void setTimer2(int duration);
 void clearTimer(int key);
-//extern int timer_flag[3];
-//void setTimer(int duration, int key);
 
 #endif /* INC_SOFTWARE_TIMER_H_ */
