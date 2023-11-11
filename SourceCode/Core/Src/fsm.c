@@ -52,7 +52,7 @@ void fsm_run(){
 				} else index_led++;
 				setTimer2(200);
 			}
-			if(isButtonPressed0()==1){
+			if(isButtonPressed(0)==1){
 				status=MODE_2;
 			}
 			break;
@@ -82,7 +82,7 @@ void fsm_run(){
 				} else index_led++;
 				setTimer2(200);
 			}
-			if(isButtonPressed0()==1){
+			if(isButtonPressed(0)==1){
 				status=MODE_2;
 			}
 			break;
@@ -113,7 +113,7 @@ void fsm_run(){
 				} else index_led++;
 				setTimer2(200);
 			}
-			if(isButtonPressed0()==1){
+			if(isButtonPressed(0)==1){
 				status=MODE_2;
 			}
 			break;
@@ -145,7 +145,7 @@ void fsm_run(){
 				} else index_led++;
 				setTimer2(200);
 			}
-			if(isButtonPressed0()==1){
+			if(isButtonPressed(0)==1){
 				status=MODE_2;
 			}
 			break;

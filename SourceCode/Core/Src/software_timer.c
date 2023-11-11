@@ -63,3 +63,16 @@ void timerRun(){
 		}
 	}
 }
+
+void clearTimer(int key){
+	if(key==0){
+		timer_flag0=0;
+		timer_counter0=0;
+	} else if(key==1){
+		timer_flag1=0;
+		timer_counter1=0;
+	} else {
+		timer_flag2=0;
+		timer_counter2=0;
+	}
+}

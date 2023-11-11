@@ -13,10 +13,10 @@ void timerRun();
 extern int timer_flag0;
 extern int timer_flag1;
 extern int timer_flag2;
+void setTimer0(int duration);
 void setTimer1(int duration);
 void setTimer2(int duration);
-void setTimer3(int duration);
-
+void clearTimer(int key);
 //extern int timer_flag[3];
 //void setTimer(int duration, int key);
 

@@ -8,6 +8,8 @@
 #include"global.h"
 int status;
 int Sevsegbuffer[3]={5,2,3};
+int btn2hold=0;
+int btn3hold=0;
 void updateSevsegbuffer(int key, int value){
 	Sevsegbuffer[key]=value;
 }
