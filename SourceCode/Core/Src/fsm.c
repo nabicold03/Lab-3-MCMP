@@ -38,6 +38,8 @@ void fsm_run(){
 				status=Ye1andRe2;
 				current_led_1=Sevsegbuffer[1];
 				setTimer0(current_led_1*1000);
+				setTimer1(1000);
+				setTimer2(200);
 			}
 			if(timer_flag1==1){
 				updateClockBuffer(current_led_1,current_led_2);
@@ -68,6 +70,8 @@ void fsm_run(){
 				current_led_1=Sevsegbuffer[0];
 				current_led_2=Sevsegbuffer[2];
 				setTimer0(current_led_2*1000);
+				setTimer1(1000);
+				setTimer2(200);
 			}
 			if(timer_flag1==1){
 				updateClockBuffer(current_led_1,current_led_2);
@@ -99,6 +103,8 @@ void fsm_run(){
 				status=Re1andYe2;
 				current_led_2=Sevsegbuffer[1];
 				setTimer0(current_led_2*1000);
+				setTimer1(1000);
+				setTimer2(200);
 			}
 			if(timer_flag1==1){
 				setTimer1(1000);
@@ -131,6 +137,8 @@ void fsm_run(){
 				current_led_1=Sevsegbuffer[2];
 				current_led_2=Sevsegbuffer[0];
 				setTimer0(current_led_1*1000);
+				setTimer1(1000);
+				setTimer2(200);
 			}
 			if(timer_flag1==1){
 				setTimer1(1000);
