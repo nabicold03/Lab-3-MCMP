@@ -97,7 +97,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  status=INIT;
+  status=MODE_1;
   while (1)
   {
     /* USER CODE END WHILE */
@@ -233,7 +233,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pins : Button_0_Pin Button_1_Pin Button_2_Pin */
   GPIO_InitStruct.Pin = Button_0_Pin|Button_1_Pin|Button_2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 }
@@ -241,9 +241,9 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	timerRun();
-	getKeyInput(0);
-	getKeyInput(1);
-	getKeyInput(2);
+	getKeyInput0();
+	getKeyInput1();
+	getKeyInput2();
 }
 /* USER CODE END 4 */
 
