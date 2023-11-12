@@ -33,14 +33,16 @@ void fsm_run(){
 			if(timer_flag0==1){
 				status=Ye1andRe2;
 				current_led_1=Sevsegbuffer[1];
+				current_led_2--;
+				updateClockBuffer(current_led_1, current_led_2);
 				setTimer0(current_led_1*1000);
 				setTimer1(1000);
 				setTimer2(100);
 			}
 			if(timer_flag1==1){
-				updateClockBuffer(current_led_1,current_led_2);
 				current_led_1--;
 				current_led_2--;
+				updateClockBuffer(current_led_1,current_led_2);
 				setTimer1(1000);
 			}
 			if(timer_flag2==1){
@@ -48,7 +50,7 @@ void fsm_run(){
 				if(index_led >= 3){
 					index_led=0;
 				} else index_led++;
-				setTimer2(200);
+				setTimer2(100);
 			}
 			if(isButtonPressed(0)==1){
 				status=MODE_2;
@@ -65,15 +67,16 @@ void fsm_run(){
 				status=Re1andGr2;
 				current_led_1=Sevsegbuffer[0];
 				current_led_2=Sevsegbuffer[2];
+				updateClockBuffer(current_led_1, current_led_2);
 				setTimer0(current_led_2*1000);
 				setTimer1(1000);
 				setTimer2(100);
 			}
 			if(timer_flag1==1){
-				updateClockBuffer(current_led_1,current_led_2);
-				setTimer1(1000);
 				current_led_1--;
 				current_led_2--;
+				updateClockBuffer(current_led_1,current_led_2);
+				setTimer1(1000);
 			}
 			if(timer_flag2==1){
 				update7seg(index_led);
@@ -96,15 +99,17 @@ void fsm_run(){
 			if(timer_flag0==1){
 				status=Re1andYe2;
 				current_led_2=Sevsegbuffer[1];
+				current_led_1--;
+				updateClockBuffer(current_led_1, current_led_2);
 				setTimer0(current_led_2*1000);
 				setTimer1(1000);
 				setTimer2(100);
 			}
 			if(timer_flag1==1){
-				setTimer1(1000);
-				updateClockBuffer(current_led_1, current_led_2);
 				current_led_1--;
 				current_led_2--;
+				setTimer1(1000);
+				updateClockBuffer(current_led_1, current_led_2);
 			}
 			if(timer_flag2==1){
 				update7seg(index_led);
@@ -128,15 +133,16 @@ void fsm_run(){
 				status=Gr1andRe2;
 				current_led_1=Sevsegbuffer[2];
 				current_led_2=Sevsegbuffer[0];
+				updateClockBuffer(current_led_1, current_led_2);
 				setTimer0(current_led_1*1000);
 				setTimer1(1000);
 				setTimer2(100);
 			}
 			if(timer_flag1==1){
-				setTimer1(1000);
-				updateClockBuffer(current_led_1, current_led_2);
 				current_led_1--;
 				current_led_2--;
+				setTimer1(1000);
+				updateClockBuffer(current_led_1, current_led_2);
 			}
 			if(timer_flag2==1){
 				update7seg(index_led);
