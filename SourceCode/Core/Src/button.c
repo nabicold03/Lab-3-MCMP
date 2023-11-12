@@ -40,23 +40,22 @@ void getKeyInput(int key){
 		keyReg2[key]=HAL_GPIO_ReadPin(Button_2_GPIO_Port, Button_2_Pin);
 	}
 	if((keyReg0[key]==keyReg1[key]) && (keyReg1[key]==keyReg2[key])){
-		if(keyReg3[key] != keyReg2[key]){
+		if(keyReg3[key] != keyReg2[key]){	//nhan tha
 			keyReg3[key]=keyReg2[key];
 			if(keyReg2[key]==PRESSED_STATE){
 				setflag(key);
 				TimerForKeyPress[key]=200;
-			} else {
-				btn2hold=0;
-				btn3hold=0;
 			}
-		} else {
-			TimerForKeyPress[key]--;
-			if(TimerForKeyPress[key]<=0){
-				keyReg3[key]=NORMAL_STATE;
-				if(key==1){
-					btn2hold=1;
-				} else if(key==2){
-					btn3hold=1;
+		} else {	//tha hoac nhan de
+			if(keyReg3[key]==PRESSED_STATE){	//neu nhan de
+				TimerForKeyPress[key]--;
+				if(TimerForKeyPress[key]<=0){
+					keyReg3[key]=NORMAL_STATE;
+					if(key==1){
+						btn2hold=1;
+					} else if(key==2){
+						btn3hold=1;
+					}
 				}
 			}
 		}

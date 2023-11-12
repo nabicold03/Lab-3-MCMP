@@ -210,7 +210,7 @@ void getKeyInput(int key){
  800023a:	f851 3023 	ldr.w	r3, [r1, r3, lsl #2]
  800023e:	429a      	cmp	r2, r3
  8000240:	d148      	bne.n	80002d4 <getKeyInput+0x134>
-		if(keyReg3[key] != keyReg2[key]){
+		if(keyReg3[key] != keyReg2[key]){	//nhan tha
  8000242:	4a2b      	ldr	r2, [pc, #172]	; (80002f0 <getKeyInput+0x150>)
  8000244:	687b      	ldr	r3, [r7, #4]
  8000246:	f852 2023 	ldr.w	r2, [r2, r3, lsl #2]
