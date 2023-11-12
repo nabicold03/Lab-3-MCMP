@@ -13,7 +13,6 @@
 #include"main.h"
 
 extern int btn2hold;
-extern int btn3hold;
 extern int status;
 extern int led_buffer[4];
 extern int Sevsegbuffer[3];

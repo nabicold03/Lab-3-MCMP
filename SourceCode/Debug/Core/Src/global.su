@@ -1,2 +1,2 @@
-global.c:13:6:updateSevsegbuffer	16	static
-global.c:16:5:alteb	16	static
+global.c:12:6:updateSevsegbuffer	16	static
+global.c:15:5:alteb	16	static

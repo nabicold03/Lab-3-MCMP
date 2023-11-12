@@ -14,9 +14,9 @@ void fsm_manual_run(){
 		case MODE_2:
 			clearTimer(0);	//clear timer 0
 			status=MAN_RED;	//change to man_red
-			setTimer1(500);	//blink led
+			setTimer1(250);	//blink led
 			current=1;		//this var is used as counter up from 1 to 99 (for increment btn 2)
-			setTimer2(200);	//display 7seg
+			setTimer2(100);	//display 7seg
 			index=0;
 			turnoffall();	//turn off all led
 			updateClockBuffer(2, current);	//updatebuffer to show up mode 2 and the value of time
@@ -28,16 +28,16 @@ void fsm_manual_run(){
 			if(timer_flag0==1){	//timer_flag0 is set -> comeback to mode 1
 				status=MODE_1;
 			}
-			if(timer_flag1==1){	//blink led every 500ms
+			if(timer_flag1==1){	//blink led every 250ms
 				blinky0();
-				setTimer1(500);
+				setTimer1(250);
 			}
 			if(timer_flag2==1){	//display each 7seg sequentially after 200ms
 				update7seg(index);
 				if(index >= 3){
 					index=0;
 				} else index++;
-				setTimer2(200);
+				setTimer2(100);
 			}
 			if(isButtonPressed(0)==1){	//press btn 0 -> change to mode 3
 				status=MODE_3;
@@ -65,9 +65,9 @@ void fsm_manual_run(){
 		case MODE_3:
 			clearTimer(0);	//clear timer 0
 			status=MAN_YELLOW;	//change to man_red
-			setTimer1(500);	//blink led
+			setTimer1(250);	//blink led
 			current=1;		//this var is used as counter up from 1 to 99 (for increment btn 2)
-			setTimer2(200);	//display 7seg
+			setTimer2(100);	//display 7seg
 			index=0;
 			turnoffall();	//turn off all led
 			updateClockBuffer(3, current);	//updatebuffer to show up mode 2 and the value of time
@@ -77,16 +77,16 @@ void fsm_manual_run(){
 			if(timer_flag0==1){	//time_flag0 is set => change to mode 1
 				status=MODE_1;
 			}
-			if(timer_flag1==1){	//blink led every 500ms
+			if(timer_flag1==1){	//blink led every 250ms
 				blinky1();
-				setTimer1(500);
+				setTimer1(250);
 			}
 			if(timer_flag2==1){	//display each 7seg sequentially after 200ms
 				update7seg(index);
 				if(index >= 3){
 					index=0;
 				} else index++;
-				setTimer2(200);
+				setTimer2(100);
 			}
 			if(isButtonPressed(0)==1){	//change mode
 				status=MODE_4;
@@ -114,9 +114,9 @@ void fsm_manual_run(){
 		case MODE_4:
 			clearTimer(0);
 			status=MAN_GREEN;
-			setTimer1(500);	//blink led
+			setTimer1(250);	//blink led
 			current=1;
-			setTimer2(200);	//display 7seg
+			setTimer2(100);	//display 7seg
 			index=0;
 			turnoffall();
 			updateClockBuffer(4, current);
@@ -127,14 +127,14 @@ void fsm_manual_run(){
 			}
 			if(timer_flag1==1){
 				blinky2();
-				setTimer1(500);
+				setTimer1(250);
 			}
 			if(timer_flag2==1){
 				update7seg(index);
 				if(index >= 3){
 					index=0;
 				} else index++;
-				setTimer2(200);
+				setTimer2(100);
 			}
 			if(isButtonPressed(0)==1){	//change mode
 				status=MODE_1;
@@ -148,13 +148,11 @@ void fsm_manual_run(){
 			}
 			if(isButtonPressed(2)==1){
 				//set value
-				if(btn3hold==0){
-					updateSevsegbuffer(2, current);
-					if(alteb(Sevsegbuffer[0],Sevsegbuffer[2])==1){	//RED <= GREEN
-						updateSevsegbuffer(0, current+Sevsegbuffer[1]);		//red=green+yellow			//red
-					} else {	//RED > GREEN
-						updateSevsegbuffer(1, Sevsegbuffer[0]-current);	//update green=red-yellow
-					}
+				updateSevsegbuffer(2, current);
+				if(alteb(Sevsegbuffer[0],Sevsegbuffer[2])==1){	//RED <= GREEN
+					updateSevsegbuffer(0, current+Sevsegbuffer[1]);		//red=green+yellow			//red
+				} else {	//RED > GREEN
+					updateSevsegbuffer(1, Sevsegbuffer[0]-current);	//update green=red-yellow
 				}
 				//set environment
 				setTimer0(5000);

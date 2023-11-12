@@ -21,7 +21,7 @@ void fsm_run(){
 			updateClockBuffer(current_led_1, current_led_2);
 			setTimer0(current_led_1*1000);
 			setTimer1(1000);
-			setTimer2(200);
+			setTimer2(100);
 			break;
 		case Gr1andRe2:
 			//TODO
@@ -35,7 +35,7 @@ void fsm_run(){
 				current_led_1=Sevsegbuffer[1];
 				setTimer0(current_led_1*1000);
 				setTimer1(1000);
-				setTimer2(200);
+				setTimer2(100);
 			}
 			if(timer_flag1==1){
 				updateClockBuffer(current_led_1,current_led_2);
@@ -67,7 +67,7 @@ void fsm_run(){
 				current_led_2=Sevsegbuffer[2];
 				setTimer0(current_led_2*1000);
 				setTimer1(1000);
-				setTimer2(200);
+				setTimer2(100);
 			}
 			if(timer_flag1==1){
 				updateClockBuffer(current_led_1,current_led_2);
@@ -80,7 +80,7 @@ void fsm_run(){
 				if(index_led >= 3){
 					index_led=0;
 				} else index_led++;
-				setTimer2(200);
+				setTimer2(100);
 			}
 			if(isButtonPressed(0)==1){
 				status=MODE_2;
@@ -98,7 +98,7 @@ void fsm_run(){
 				current_led_2=Sevsegbuffer[1];
 				setTimer0(current_led_2*1000);
 				setTimer1(1000);
-				setTimer2(200);
+				setTimer2(100);
 			}
 			if(timer_flag1==1){
 				setTimer1(1000);
@@ -111,7 +111,7 @@ void fsm_run(){
 				if(index_led >= 3){
 					index_led=0;
 				} else index_led++;
-				setTimer2(200);
+				setTimer2(100);
 			}
 			if(isButtonPressed(0)==1){
 				status=MODE_2;
@@ -130,7 +130,7 @@ void fsm_run(){
 				current_led_2=Sevsegbuffer[0];
 				setTimer0(current_led_1*1000);
 				setTimer1(1000);
-				setTimer2(200);
+				setTimer2(100);
 			}
 			if(timer_flag1==1){
 				setTimer1(1000);
@@ -143,7 +143,7 @@ void fsm_run(){
 				if(index_led >= 3){
 					index_led=0;
 				} else index_led++;
-				setTimer2(200);
+				setTimer2(100);
 			}
 			if(isButtonPressed(0)==1){
 				status=MODE_2;

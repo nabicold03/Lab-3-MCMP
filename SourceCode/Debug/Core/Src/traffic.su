@@ -2,7 +2,7 @@ traffic.c:10:6:Gr1_Re2	8	static
 traffic.c:19:6:Ye1_Re2	8	static
 traffic.c:28:6:Re1_Gr2	8	static
 traffic.c:37:6:Re1_Ye2	8	static
-traffic.c:59:6:turnoffall	8	static
-traffic.c:68:6:blinky0	8	static
-traffic.c:73:6:blinky1	8	static
-traffic.c:78:6:blinky2	8	static
+traffic.c:46:6:turnoffall	8	static
+traffic.c:55:6:blinky0	8	static
+traffic.c:60:6:blinky1	8	static
+traffic.c:65:6:blinky2	8	static

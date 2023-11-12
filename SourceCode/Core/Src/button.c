@@ -45,6 +45,8 @@ void getKeyInput(int key){
 			if(keyReg2[key]==PRESSED_STATE){
 				setflag(key);
 				TimerForKeyPress[key]=200;
+			} else {
+				btn2hold=0;
 			}
 		} else {	//tha hoac nhan de
 			if(keyReg3[key]==PRESSED_STATE){	//neu nhan de
@@ -53,8 +55,6 @@ void getKeyInput(int key){
 					keyReg3[key]=NORMAL_STATE;
 					if(key==1){
 						btn2hold=1;
-					} else if(key==2){
-						btn3hold=1;
 					}
 				}
 			}
